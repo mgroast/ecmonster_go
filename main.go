@@ -2,13 +2,12 @@ package main
 
 import(
     "github.com/gin-gonic/gin"
+    c "github.com/mgroast/ecmonster/controllers"
 )
 
 func main() {
-    router := gin.Default()
-    router.LoadHTMLGlob("templates/*.html")
-    router.GET("/", func(ctx *gin.Context) {
-        ctx.HTML(200, "index.html", gin.H{})
-    })
-    router.Run()
+    r := gin.Default()
+    r.LoadHTMLGlob("views/*")
+    r.GET("/", c.GetUsers)
+    r.Run(":8080")
 }
