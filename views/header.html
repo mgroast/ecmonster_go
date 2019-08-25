@@ -6,6 +6,7 @@
 	<title>ECMonster</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
+	<link href="assets/css/main.css" rel="stylesheet">
 </head>
 <body>
 	<div id="header">
@@ -14,6 +15,19 @@
 				<img src="/assets/img/header/logo.png">
 			</a>
 		</div>
+		<div id="searchbox">
+			<input type="text" placeholder="検索">
+		</div>
+		<div id="notice">
+		</div>
+		{{if false}}
+		<div id="user-info">
+		</div>
+		{{else}}
+		<div id="login">
+			<a href="/login">ログイン</a>
+		</div>
+		{{end}}
 	</div>
 
 {{end}}

@@ -10,6 +10,7 @@ func main() {
 	r.Static("/assets", "./assets")
 	r.LoadHTMLGlob("views/*")
 	r.GET("/", c.GetIndex)
+	r.GET("/login", c.GetLogin)
 	r.GET("/user", c.GetUsers)
 	r.Run(":8080")
 }

@@ -1,8 +1,8 @@
 package models
 
 type User struct {
-	ID int
-	Name string
+	ID string
+	Pass string
 }
 
 func (u User) GetUsers() *[]User {
