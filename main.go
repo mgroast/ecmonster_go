@@ -7,7 +7,9 @@ import(
 
 func main() {
 	r := gin.Default()
+	r.Static("/assets", "./assets")
 	r.LoadHTMLGlob("views/*")
 	r.GET("/", c.GetIndex)
+	r.GET("/user", c.GetUsers)
 	r.Run(":8080")
 }
