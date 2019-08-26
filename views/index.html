@@ -1,5 +1,14 @@
 {{template "header"}}
-<h1>index</h1>
 <h2>新着商品</h2>
-
+<div class="products">
+	{{range .products}}
+	<div class="product">
+		<div class="product-image">
+			<a href="/product?id=1">
+				<img src="/assets/img/monster/1/thumbnail.png">
+			</a>
+		</div>
+	</div>
+	{{end}}
+</div>
 {{template "footer"}}

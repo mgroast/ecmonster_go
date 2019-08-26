@@ -21,5 +21,6 @@ func GormDB() *gorm.DB {
 	}
 	db.LogMode(true)
 	db.AutoMigrate(&User{})
+	db.AutoMigrate(&Product{})
 	return db
 }
